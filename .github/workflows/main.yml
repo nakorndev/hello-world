@@ -14,18 +14,15 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: 14
-    - name: Bundling YAML
+    - name: Building an application
       run: |
         npm install
         npm run build
-    - name: Create a gh-pages branch
-      run: git checkout --orphan gh-pages
-    - uses: EndBug/add-and-commit@v6
-      with:
-        author_name: nakorndev
-        author_email: nakorndev@gmail.com
-        branch: gh-pages
-        add: docs --force
-        message: Deploy to GitHub Pages
-        push: origin gh-pages --force
-        token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Commit and push to gh-pages
+      run: |
+        git config user.name nakorndev
+        git config user.email "nakorndev@gmail.com"
+        git checkout --orphan gh-pages
+        git add docs --force
+        git commit -m "Deploy to GitHub Pages"
+        git push --force origin gh-pages
