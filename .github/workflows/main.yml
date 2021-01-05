@@ -23,6 +23,7 @@ jobs:
         git config user.name nakorndev
         git config user.email "nakorndev@gmail.com"
         git checkout --orphan gh-pages
+        git reset
         git add docs/* --force
         git commit -m "Deploy to GitHub Pages"
         git push --force origin gh-pages
