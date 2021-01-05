@@ -25,6 +25,7 @@ jobs:
         author_name: nakorndev
         author_email: nakorndev@gmail.com
         branch: gh-pages
+        pull_strategy: --rebase
         add: docs --force
         message: Deploy to GitHub Pages
         push: origin gh-pages --force
