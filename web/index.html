@@ -66,8 +66,9 @@
                               </div>
                               <div class="media-content">
                                 <p>
-                                  <b>{{ profile.full_name }}</b>
-                                  ({{ profile.nickname }})
+                                  <b v-if="profile.full_name">{{ profile.full_name }}</b>
+                                  <i v-else>ไม่ได้ระบุชื่อ</i>
+                                  <span v-if="profile.nickname">({{ profile.nickname }})</span>
                                 </p>
                                 <p>
                                   <b>อายุ: </b>
@@ -82,7 +83,8 @@
                             </div>
                             <div class="message is-info mt-3">
                               <div class="message-body">
-                                {{ profile.message }}
+                                <span v-if="profile.message">{{ profile.message }}</span>
+                                <i v-else>ไม่ได้ระบุข้อความ</i>
                               </div>
                             </div>
                           </div>
