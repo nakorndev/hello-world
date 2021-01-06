@@ -20,8 +20,8 @@ Repository (โปรเจค) นี้จะเป็นการนำชื
 
 - ไฟล์ใหม่ต้องตั้งเป็นชื่อ `./data/<your-github-username>.yml` เท่านั้น เช่น [`./data/nakorndev.yml`](https://github.com/nakorncode/hello-world/blob/main/data/nakorndev.yml)
 - ไม่อนุญาตให้แก้ไขอย่างอื่นนอกจากไฟล์ `.yml` ที่กำหนด และชื่อไฟล์ต้องถูกต้อง
-- เอกสายภายในจะต้องมีการ **เว้นบรรทัด** ในบรรทัดสุดท้ายให้ถูกต้องด้วย
-- ข้อมูลทั้งหมดจะปลอมหรือไม่กรอกบางอย่างก็ได้ สำหรับผู้ที่ต้องการปิดข้อมูลส่วนตัว
+- เอกสารภายในจะต้องมีการ **เว้นบรรทัด** ในบรรทัดสุดท้ายให้ถูกต้องด้วย [คลิกเพื่อดูรูปตัวอย่าง](./images/eof.png)
+- ข้อมูลทั้งหมดจะปลอมเอา หรือจะไม่กรอกบางอย่างก็ได้ สำหรับผู้ที่ต้องการปิดข้อมูลส่วนตัว
 - ข้อมูลภายในสามารถคัดลอกตามนี้เพื่อไปใช้งานได้
 
 ```yml
@@ -43,7 +43,7 @@ message: <ข้อความใดๆก็ได้ แต่ก็ควร
 - เสร็จแล้ว `git add` `git commit` และ `git push` ตามลำดับมาที่ Branch ใดๆก็ได้
 - กลับมาที่หน้า [nakorncode/hello-world](https://github.com/nakorncode/hello-world) ไปที่แท็ก [Pull requests](https://github.com/nakorncode/hello-world/pulls)
 - เลือก [New pull request](https://github.com/nakorncode/hello-world/compare) ปุ่มสีเขียว
-- ให้เลือก Compare จาก `base repository: nakorncode/hello-world` `base: main` ⬅ `head repository: <your-github-username>/hello-world` `compare: <your-branch>`
+- ให้เลือก Compare จาก `base repository: nakorncode/hello-world` `base: main` ← `head repository: <your-github-username>/hello-world` `compare: <your-branch>`
   - หากขั้นตอนนี้ไม่ขึ้นให้เลือก ให้กดปุ่ม **compare across forks** ที่เป็นลิงก์แบบข้อความ
 - จากนั้นให้ระบุข้อมูลที่ต้องการใดๆก็ได้ และดำเนินการต่อ
 - รอที่หน้า Pull requests ที่เพิ่งสร้างมาประมาณไม่เกิน 30 วินาที จะมีบอทตอบกลับว่าผ่านหรือไม่อย่างไร
