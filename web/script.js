@@ -24,7 +24,7 @@ Vue.createApp({
   async mounted () {
     const jsonUrl = this.devMode
       ? '../docs/profiles.json'
-      : 'https://raw.githubusercontent.com/nakorncode/hello-world/gh-pages/docs/profiles.json'
+      : `https://raw.githubusercontent.com/nakorncode/hello-world/gh-pages/docs/profiles.json?timestamp=${+new Date()}`
     try {
       const { data } = await axios.get(jsonUrl)
       this.profiles = shuffle(data)
