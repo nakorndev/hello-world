@@ -1,6 +1,6 @@
 {
   "name": "hello-world",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A hello world project for learn how to pull request",
   "main": "builder/index.js",
   "scripts": {

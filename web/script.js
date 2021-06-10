@@ -16,15 +16,10 @@ Vue.createApp({
         }
       }
       return founds
-    },
-    devMode () {
-      return location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     }
   },
   async mounted () {
-    const jsonUrl = this.devMode
-      ? '../docs/profiles.json'
-      : `https://raw.githubusercontent.com/nakorndev/hello-world/gh-pages/docs/profiles.json?timestamp=${+new Date()}`
+    const jsonUrl = `./profiles.json?timestamp=${+new Date()}`
     try {
       const { data } = await axios.get(jsonUrl)
       this.profiles = shuffle(data)
@@ -35,9 +30,7 @@ Vue.createApp({
   },
   methods: {
     avatarUrl (profile) {
-      return this.devMode
-        ? `../docs/avatars/${profile.file_name}.svg`
-        : `./avatars/${profile.file_name}.svg`
+      return `./avatars/${profile.file_name}.svg`
     }
   }
 }).mount('#app')

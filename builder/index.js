@@ -42,7 +42,7 @@ const bundleData = async () => {
     await fs.writeFileSync(avatarPath, createAvatar(parsed))
     json.push(parsed)
   }
-  console.log('- Write a .json file')
+  console.log('- Write a .json file', json)
   await fs.writeFileSync(profileJsonPath, JSON.stringify(json))
 }
 
